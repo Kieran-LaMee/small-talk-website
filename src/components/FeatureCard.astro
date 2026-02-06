@@ -1,0 +1,23 @@
+---
+import Icon from "./Icon.astro";
+
+interface Props {
+  icon: "shield" | "check" | "moon" | "palette";
+  title: string;
+  description: string;
+}
+
+const { icon, title, description } = Astro.props;
+---
+
+<div class="neu-raised p-6 md:p-8 flex flex-col items-center text-center">
+  <div class="neu-pressed w-14 h-14 flex items-center justify-center mb-5 rounded-2xl">
+    <Icon name={icon} size={28} class="text-[--color-contrast]" />
+  </div>
+  <h3 class="font-title text-3xl text-[--color-contrast] leading-tight mb-2">
+    {title}
+  </h3>
+  <p class="text-[--color-muted] text-sm leading-relaxed">
+    {description}
+  </p>
+</div>

@@ -1,0 +1,22 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className = "" } = Astro.props;
+---
+
+<div class={`inline-block ${className}`}>
+  <div class="relative mx-auto w-[260px] md:w-[300px]">
+    <!-- Phone frame -->
+    <div class="relative bg-[--color-black] rounded-[2.5rem] p-3 shadow-xl">
+      <!-- Notch -->
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-6 bg-[--color-black] rounded-b-2xl z-10"></div>
+
+      <!-- Screen -->
+      <div class="relative bg-[--color-bg-primary] rounded-[2rem] overflow-hidden aspect-[9/19.5]">
+        <slot />
+      </div>
+    </div>
+  </div>
+</div>

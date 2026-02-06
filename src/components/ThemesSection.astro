@@ -1,0 +1,57 @@
+---
+import SectionHeading from "./SectionHeading.astro";
+
+const themes = [
+  {
+    name: "Morning Window",
+    colors: ["#FFF8F0", "#A1A69F", "#2E4A3A", "#8B4926", "#7A6B5A"],
+    free: true,
+  },
+  {
+    name: "Late Afternoon",
+    colors: ["#FFF5E6", "#D4956A", "#5C3D2E", "#B8860B", "#8B7355"],
+    free: false,
+  },
+  {
+    name: "Evening At Home",
+    colors: ["#2C2C3A", "#6B5B7B", "#D4C5A9", "#C9956B", "#8E8E9A"],
+    free: false,
+  },
+  {
+    name: "Potted Fern",
+    colors: ["#F0F4E8", "#6B8E5A", "#2D4A2D", "#8B7355", "#5C6B4E"],
+    free: false,
+  },
+];
+---
+
+<section id="themes" class="py-20 md:py-28 px-6 scroll-animate">
+  <div class="max-w-4xl mx-auto">
+    <SectionHeading title="Themes" annotation="make it yours" />
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-6">
+      {themes.map((theme) => (
+        <div class="neu-raised-sm p-4 text-center">
+          <div class="flex justify-center gap-1.5 mb-3">
+            {theme.colors.map((color) => (
+              <div
+                class="w-6 h-6 rounded-full border border-black/5"
+                style={`background-color: ${color};`}
+              />
+            ))}
+          </div>
+          <p class="font-handwritten text-base text-[--color-contrast]">
+            {theme.name}
+          </p>
+          {theme.free && (
+            <p class="text-[9px] text-[--color-muted] mt-1 uppercase tracking-wider">Included free</p>
+          )}
+        </div>
+      ))}
+    </div>
+
+    <p class="text-center text-xs text-[--color-muted] mt-8 opacity-70">
+      One theme free. Unlock all with a one-time purchase.
+    </p>
+  </div>
+</section>

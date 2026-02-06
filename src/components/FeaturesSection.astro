@@ -1,0 +1,33 @@
+---
+import FeatureCard from "./FeatureCard.astro";
+import SectionHeading from "./SectionHeading.astro";
+---
+
+<section id="features" class="py-20 md:py-28 px-6 scroll-animate">
+  <div class="max-w-4xl mx-auto">
+    <SectionHeading title="Features" annotation="less is more" />
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
+      <FeatureCard
+        icon="shield"
+        title="Truly private"
+        description="Nothing leaves your phone. No accounts. No cloud. No sync."
+      />
+      <FeatureCard
+        icon="check"
+        title="Just one thing"
+        description="Add people. Write notes. That's it. No features to learn."
+      />
+      <FeatureCard
+        icon="moon"
+        title="No demands"
+        description="No streaks. No reminders. No notifications. No guilt."
+      />
+      <FeatureCard
+        icon="palette"
+        title="Make it yours"
+        description="Choose a palette that feels like you."
+      />
+    </div>
+  </div>
+</section>

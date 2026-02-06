@@ -33,7 +33,12 @@ src/
 │   ├── AppStoreBadge.astro # Apple/Google store badges
 │   ├── Header.astro       # Sticky header with branding + nav (showAnchors prop)
 │   ├── Footer.astro       # Tagline, links, copyright
-│   └── Hero.astro         # Landing page hero with branding, tagline, badges
+│   ├── Hero.astro         # Landing page hero with branding, tagline, badges
+│   ├── FeatureCard.astro  # Neumorphic card with icon, title, description
+│   ├── FeaturesSection.astro # 4-card feature grid (privacy, simplicity, calm, themes)
+│   ├── PhoneMockup.astro  # CSS phone frame with slot for screenshot content
+│   ├── PreviewSection.astro # Phone mockup with app preview and caption
+│   └── ThemesSection.astro # Color palette swatches for 4 themes
 └── styles/
     └── global.css          # Tailwind + theme variables + neumorphic utilities
 public/
@@ -80,13 +85,18 @@ public/
 | `Header` | `showAnchors` | Sticky header, branding + nav. Anchors hidden on subpages |
 | `Footer` | — | Tagline, privacy/support links, copyright |
 | `Hero` | — | Landing page hero: branding, tagline, anti-feature callout, badges |
+| `FeatureCard` | `icon`, `title`, `description` | Neumorphic card with icon, Peddana title, description |
+| `FeaturesSection` | — | 4 feature cards in responsive grid |
+| `PhoneMockup` | `class` | CSS phone frame with notch, slot for screen content |
+| `PreviewSection` | — | Phone mockup with placeholder app UI and caption |
+| `ThemesSection` | — | Color palette swatches (4 themes) with freemium note |
 
 ## Session Progress
 
 - [x] Session 1: Project scaffolding & configuration
 - [x] Session 2: Design system & core components
 - [x] Session 3: Landing page structure
-- [ ] Session 4: Landing page content sections
+- [x] Session 4: Landing page content sections
 - [ ] Session 5: Privacy policy page
 - [ ] Session 6: Support page & final polish
 - [ ] Session 7: Deployment & launch

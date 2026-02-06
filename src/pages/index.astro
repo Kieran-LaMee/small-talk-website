@@ -1,7 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
-import SectionHeading from "../components/SectionHeading.astro";
+import FeaturesSection from "../components/FeaturesSection.astro";
+import PreviewSection from "../components/PreviewSection.astro";
+import ThemesSection from "../components/ThemesSection.astro";
 ---
 
 <BaseLayout title="Small Talk Notebook — A quiet place for the people you know">
@@ -9,18 +11,11 @@ import SectionHeading from "../components/SectionHeading.astro";
   <Hero />
 
   <!-- Features -->
-  <section id="features" class="py-20 md:py-28 px-6 scroll-animate">
-    <div class="max-w-4xl mx-auto">
-      <SectionHeading title="Features" annotation="less is more" />
-      <p class="text-center text-[--color-muted]">Feature cards coming in Session 4.</p>
-    </div>
-  </section>
+  <FeaturesSection />
 
   <!-- Preview -->
-  <section id="preview" class="py-20 md:py-28 px-6 bg-[--color-bg-secondary]/[0.06] scroll-animate">
-    <div class="max-w-4xl mx-auto">
-      <SectionHeading title="Preview" annotation="a quiet look" />
-      <p class="text-center text-[--color-muted]">Phone mockups coming in Session 4.</p>
-    </div>
-  </section>
+  <PreviewSection />
+
+  <!-- Themes -->
+  <ThemesSection />
 </BaseLayout>
