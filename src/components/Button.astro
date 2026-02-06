@@ -1,0 +1,45 @@
+---
+interface Props {
+  variant?: "primary" | "secondary";
+  href?: string;
+  size?: "sm" | "md" | "lg";
+  class?: string;
+}
+
+const {
+  variant = "primary",
+  href,
+  size = "md",
+  class: className = "",
+} = Astro.props;
+
+const sizeClasses = {
+  sm: "px-4 py-2 text-sm",
+  md: "px-6 py-3 text-base",
+  lg: "px-8 py-4 text-lg",
+};
+
+const variantClasses = {
+  primary: "bg-[--color-contrast] text-[--color-bg-primary]",
+  secondary: "bg-[--color-bg-primary] text-[--color-contrast]",
+};
+
+const classes = [
+  "neu-button inline-block font-body font-bold rounded-xl text-center",
+  sizeClasses[size],
+  variantClasses[variant],
+  className,
+].join(" ");
+
+const Tag = href ? "a" : "button";
+---
+
+{href ? (
+  <a href={href} class={classes}>
+    <slot />
+  </a>
+) : (
+  <button class={classes}>
+    <slot />
+  </button>
+)}

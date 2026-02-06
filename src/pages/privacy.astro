@@ -1,10 +1,10 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="Privacy Policy — Small Talk Notebook">
-  <main class="flex-1 py-16 px-8">
-    <article class="max-w-2xl mx-auto">
+<BaseLayout title="Privacy Policy — Small Talk Notebook" showAnchors={false}>
+  <article class="py-16 px-6">
+    <div class="max-w-2xl mx-auto">
       <a href="/" class="text-[--color-muted] hover:text-[--color-contrast] transition-colors mb-8 inline-block">
         &larr; Back to home
       </a>
@@ -48,15 +48,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <p>Email us at <a href="mailto:support@smalltalknotebook.com" class="text-[--color-highlight] underline">support@smalltalknotebook.com</a></p>
         </section>
       </div>
-    </article>
-  </main>
-
-  <!-- Footer -->
-  <footer class="py-8 px-8 text-center text-sm text-[--color-muted]">
-    <nav class="flex justify-center gap-6 mb-4">
-      <a href="/" class="hover:text-[--color-contrast] transition-colors">Home</a>
-      <a href="/support" class="hover:text-[--color-contrast] transition-colors">Support</a>
-    </nav>
-    <p>&copy; {new Date().getFullYear()} Small Talk Notebook</p>
-  </footer>
+    </div>
+  </article>
 </BaseLayout>

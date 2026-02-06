@@ -81,6 +81,7 @@ body {
     4px 4px 8px rgba(0, 0, 0, 0.1),
     -4px -4px 8px rgba(255, 255, 255, 0.7);
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .neu-button:hover {
@@ -95,6 +96,61 @@ body {
     inset 2px 2px 4px rgba(0, 0, 0, 0.1),
     inset -2px -2px 4px rgba(255, 255, 255, 0.7);
   transform: translateY(0);
+}
+
+/* Responsive shadow scales — smaller on mobile */
+@media (max-width: 640px) {
+  .neu-raised {
+    box-shadow:
+      4px 4px 8px rgba(0, 0, 0, 0.08),
+      -4px -4px 8px rgba(255, 255, 255, 0.6);
+  }
+
+  .neu-raised-sm {
+    box-shadow:
+      2px 2px 4px rgba(0, 0, 0, 0.06),
+      -2px -2px 4px rgba(255, 255, 255, 0.5);
+  }
+
+  .neu-pressed {
+    box-shadow:
+      inset 3px 3px 6px rgba(0, 0, 0, 0.08),
+      inset -3px -3px 6px rgba(255, 255, 255, 0.6);
+  }
+
+  .neu-button {
+    box-shadow:
+      3px 3px 6px rgba(0, 0, 0, 0.08),
+      -3px -3px 6px rgba(255, 255, 255, 0.6);
+  }
+
+  .neu-button:hover {
+    box-shadow:
+      4px 4px 8px rgba(0, 0, 0, 0.1),
+      -4px -4px 8px rgba(255, 255, 255, 0.7);
+  }
+}
+
+/* ============================================
+   Scroll Animations
+   ============================================ */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.scroll-animate.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-animate {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 /* ============================================

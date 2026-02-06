@@ -19,12 +19,21 @@ npm run build   # Build to dist/
 ```
 src/
 ├── layouts/
-│   └── BaseLayout.astro    # Base HTML layout with meta tags
+│   └── BaseLayout.astro    # Base HTML layout with Header, Footer, scroll animations
 ├── pages/
 │   ├── index.astro         # Landing page
 │   ├── privacy.astro       # Privacy policy
-│   └── support.astro       # Support & FAQ
-├── components/             # Reusable Astro components (Session 2+)
+│   ├── support.astro       # Support & FAQ
+│   └── components.astro    # Component showcase (temporary, for visual testing)
+├── components/
+│   ├── Button.astro        # Primary/secondary variants, neumorphic, href/button
+│   ├── Card.astro          # Neumorphic raised card, configurable padding
+│   ├── SectionHeading.astro # Peddana title + optional handwritten annotation
+│   ├── Icon.astro          # SVG icons: shield, check, moon, palette
+│   ├── AppStoreBadge.astro # Apple/Google store badges
+│   ├── Header.astro       # Sticky header with branding + nav (showAnchors prop)
+│   ├── Footer.astro       # Tagline, links, copyright
+│   └── Hero.astro         # Landing page hero with branding, tagline, badges
 └── styles/
     └── global.css          # Tailwind + theme variables + neumorphic utilities
 public/
@@ -56,13 +65,27 @@ public/
 - `.neu-raised` — Raised card style
 - `.neu-raised-sm` — Subtle raised style
 - `.neu-pressed` — Inset/pressed style
+- `.neu-flat` — Flat with subtle border
 - `.neu-button` — Interactive button with hover states
+
+### Components
+
+| Component | Props | Description |
+|-----------|-------|-------------|
+| `Button` | `variant`, `href`, `size` | Primary (dark bg) / secondary (light bg), renders as `<a>` or `<button>` |
+| `Card` | `padding`, `class` | Neumorphic raised card with sm/md/lg padding |
+| `SectionHeading` | `title`, `annotation`, `align` | Section title in Peddana + optional handwritten note |
+| `Icon` | `name`, `size`, `class` | SVG icons: shield, check, moon, palette |
+| `AppStoreBadge` | `store`, `href` | Apple App Store / Google Play badge |
+| `Header` | `showAnchors` | Sticky header, branding + nav. Anchors hidden on subpages |
+| `Footer` | — | Tagline, privacy/support links, copyright |
+| `Hero` | — | Landing page hero: branding, tagline, anti-feature callout, badges |
 
 ## Session Progress
 
 - [x] Session 1: Project scaffolding & configuration
-- [ ] Session 2: Design system & core components
-- [ ] Session 3: Landing page structure
+- [x] Session 2: Design system & core components
+- [x] Session 3: Landing page structure
 - [ ] Session 4: Landing page content sections
 - [ ] Session 5: Privacy policy page
 - [ ] Session 6: Support page & final polish

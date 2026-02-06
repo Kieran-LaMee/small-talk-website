@@ -1,70 +1,26 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import SectionHeading from "../components/SectionHeading.astro";
 ---
 
 <BaseLayout title="Small Talk Notebook — A quiet place for the people you know">
-  <main class="flex-1 flex items-center justify-center p-8">
-    <div class="text-center max-w-2xl">
-      <!-- Branding -->
-      <h1 class="mb-4">
-        <span class="font-handwritten text-6xl text-[--color-contrast]">Small Talk</span>
-        <span class="font-title text-5xl text-[--color-muted] block">notebook</span>
-      </h1>
+  <!-- Hero -->
+  <Hero />
 
-      <!-- Tagline -->
-      <p class="text-xl text-[--color-muted] mb-8">
-        A quiet place for the people you know.
-      </p>
-
-      <!-- Anti-feature callout -->
-      <p class="text-sm text-[--color-muted] mb-12 opacity-70">
-        No accounts. No cloud. No sync.<br />
-        No streaks. No reminders. No guilt.<br />
-        Just names, notes, and quiet.
-      </p>
-
-      <!-- Placeholder for app store badges -->
-      <div class="flex justify-center gap-4 mb-16">
-        <div class="neu-button px-6 py-3 text-[--color-contrast]">
-          App Store — Coming Soon
-        </div>
-        <div class="neu-button px-6 py-3 text-[--color-contrast]">
-          Play Store — Coming Soon
-        </div>
-      </div>
-
-      <!-- Navigation links -->
-      <nav class="flex justify-center gap-8 text-sm text-[--color-muted]">
-        <a href="#features" class="hover:text-[--color-contrast] transition-colors">Features</a>
-        <a href="#preview" class="hover:text-[--color-contrast] transition-colors">Preview</a>
-        <a href="/privacy" class="hover:text-[--color-contrast] transition-colors">Privacy</a>
-        <a href="/support" class="hover:text-[--color-contrast] transition-colors">Support</a>
-      </nav>
-    </div>
-  </main>
-
-  <!-- Placeholder sections -->
-  <section id="features" class="py-24 px-8">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="font-title text-4xl text-[--color-contrast] mb-8">Features</h2>
-      <p class="text-[--color-muted]">Feature cards will go here.</p>
+  <!-- Features -->
+  <section id="features" class="py-20 md:py-28 px-6 scroll-animate">
+    <div class="max-w-4xl mx-auto">
+      <SectionHeading title="Features" annotation="less is more" />
+      <p class="text-center text-[--color-muted]">Feature cards coming in Session 4.</p>
     </div>
   </section>
 
-  <section id="preview" class="py-24 px-8 bg-[--color-bg-secondary]/10">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="font-title text-4xl text-[--color-contrast] mb-8">Preview</h2>
-      <p class="text-[--color-muted]">Phone mockups will go here.</p>
+  <!-- Preview -->
+  <section id="preview" class="py-20 md:py-28 px-6 bg-[--color-bg-secondary]/[0.06] scroll-animate">
+    <div class="max-w-4xl mx-auto">
+      <SectionHeading title="Preview" annotation="a quiet look" />
+      <p class="text-center text-[--color-muted]">Phone mockups coming in Session 4.</p>
     </div>
   </section>
-
-  <!-- Footer -->
-  <footer class="py-8 px-8 text-center text-sm text-[--color-muted]">
-    <p class="font-handwritten text-lg mb-4">For the details that matter.</p>
-    <nav class="flex justify-center gap-6 mb-4">
-      <a href="/privacy" class="hover:text-[--color-contrast] transition-colors">Privacy Policy</a>
-      <a href="/support" class="hover:text-[--color-contrast] transition-colors">Support</a>
-    </nav>
-    <p>&copy; {new Date().getFullYear()} Small Talk Notebook</p>
-  </footer>
 </BaseLayout>

@@ -1,0 +1,48 @@
+---
+interface Props {
+  showAnchors?: boolean;
+}
+
+const { showAnchors = true } = Astro.props;
+---
+
+<header
+  class="sticky top-0 z-50 bg-[--color-bg-primary]/90 backdrop-blur-sm transition-shadow duration-300"
+  id="site-header"
+>
+  <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+    <!-- Branding -->
+    <a href="/" class="flex items-baseline gap-1 hover:opacity-80 transition-opacity">
+      <span class="font-handwritten text-2xl text-[--color-contrast]">Small Talk</span>
+      <span class="font-title text-xl text-[--color-muted]">notebook</span>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="flex items-center gap-6 text-sm text-[--color-muted] overflow-x-auto">
+      {showAnchors && (
+        <>
+          <a href="/#features" class="hover:text-[--color-contrast] transition-colors whitespace-nowrap">Features</a>
+          <a href="/#preview" class="hover:text-[--color-contrast] transition-colors whitespace-nowrap">Preview</a>
+        </>
+      )}
+      <a href="/privacy" class="hover:text-[--color-contrast] transition-colors whitespace-nowrap">Privacy</a>
+      <a href="/support" class="hover:text-[--color-contrast] transition-colors whitespace-nowrap">Support</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const header = document.getElementById("site-header");
+  if (header) {
+    let lastScroll = 0;
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
+      if (scrollY > 20) {
+        header.style.boxShadow = "0 2px 8px rgba(0, 0, 0, 0.06)";
+      } else {
+        header.style.boxShadow = "none";
+      }
+      lastScroll = scrollY;
+    }, { passive: true });
+  }
+</script>

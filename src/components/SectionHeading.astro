@@ -1,0 +1,28 @@
+---
+interface Props {
+  title: string;
+  annotation?: string;
+  align?: "center" | "left";
+  class?: string;
+}
+
+const {
+  title,
+  annotation,
+  align = "center",
+  class: className = "",
+} = Astro.props;
+
+const alignClass = align === "center" ? "text-center" : "text-left";
+---
+
+<div class={`mb-12 ${alignClass} ${className}`}>
+  <h2 class="font-title text-4xl md:text-5xl text-[--color-contrast] leading-tight">
+    {title}
+  </h2>
+  {annotation && (
+    <p class="font-handwritten text-xl text-[--color-muted] mt-2">
+      {annotation}
+    </p>
+  )}
+</div>
