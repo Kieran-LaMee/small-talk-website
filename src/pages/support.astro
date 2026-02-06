@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Support — Small Talk Notebook">
+  <main class="flex-1 py-16 px-8">
+    <article class="max-w-2xl mx-auto">
+      <a href="/" class="text-[--color-muted] hover:text-[--color-contrast] transition-colors mb-8 inline-block">
+        &larr; Back to home
+      </a>
+
+      <h1 class="font-title text-5xl text-[--color-contrast] mb-4">Support</h1>
+      <p class="text-[--color-muted] mb-12">Questions? We're here to help.</p>
+
+      <!-- FAQ Section -->
+      <section class="mb-16">
+        <h2 class="font-title text-3xl text-[--color-contrast] mb-8">Common Questions</h2>
+
+        <div class="space-y-6">
+          <div class="neu-raised p-6">
+            <h3 class="font-bold text-[--color-contrast] mb-2">Where is my data stored?</h3>
+            <p class="text-[--color-muted]">On your device. Only your device. No cloud, no sync, no accounts, no third parties. Your notebook, your business.</p>
+          </div>
+
+          <div class="neu-raised p-6">
+            <h3 class="font-bold text-[--color-contrast] mb-2">Can I take my notes with me?</h3>
+            <p class="text-[--color-muted]">Export is coming soon. For now, your data lives safely on your phone.</p>
+          </div>
+
+          <div class="neu-raised p-6">
+            <h3 class="font-bold text-[--color-contrast] mb-2">How much does it cost?</h3>
+            <p class="text-[--color-muted]">Everything you need is free. Pay once to unlock extra themes and export — no subscriptions, no recurring charges.</p>
+          </div>
+
+          <div class="neu-raised p-6">
+            <h3 class="font-bold text-[--color-contrast] mb-2">What platforms are supported?</h3>
+            <p class="text-[--color-muted]">iOS and Android. Same quiet experience on both.</p>
+          </div>
+
+          <div class="neu-raised p-6">
+            <h3 class="font-bold text-[--color-contrast] mb-2">I found a bug. How do I report it?</h3>
+            <p class="text-[--color-muted]">Email us or open an issue on GitHub. We read everything.</p>
+          </div>
+
+          <div class="neu-raised p-6">
+            <h3 class="font-bold text-[--color-contrast] mb-2">Will you add [feature]?</h3>
+            <p class="text-[--color-muted]">Probably not. Small Talk does one thing well. That's the point.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section>
+        <h2 class="font-title text-3xl text-[--color-contrast] mb-4">Contact</h2>
+        <p class="text-[--color-muted] mb-4">
+          Email us at <a href="mailto:support@smalltalknotebook.com" class="text-[--color-highlight] underline">support@smalltalknotebook.com</a>
+        </p>
+        <p class="text-[--color-muted]">
+          Found a bug? <a href="https://github.com/Kieran-LaMee/small-talk-notebook/issues" class="text-[--color-highlight] underline">Open an issue on GitHub</a>
+        </p>
+      </section>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-8 px-8 text-center text-sm text-[--color-muted]">
+    <nav class="flex justify-center gap-6 mb-4">
+      <a href="/" class="hover:text-[--color-contrast] transition-colors">Home</a>
+      <a href="/privacy" class="hover:text-[--color-contrast] transition-colors">Privacy Policy</a>
+    </nav>
+    <p>&copy; {new Date().getFullYear()} Small Talk Notebook</p>
+  </footer>
+</BaseLayout>

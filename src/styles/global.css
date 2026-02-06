@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+/* ============================================
+   CSS Custom Properties - Morning Window Theme
+   ============================================ */
+@theme {
+  /* Colors - Morning Window palette */
+  --color-bg-primary: #FFF8F0;
+  --color-bg-secondary: #A1A69F;
+  --color-contrast: #2E4A3A;
+  --color-white: #FFFFFF;
+  --color-black: #1E1E1E;
+  --color-highlight: #8B4926;
+  --color-muted: #7A6B5A;
+
+  /* Fonts */
+  --font-body: 'Lato', sans-serif;
+  --font-title: 'Peddana', serif;
+  --font-handwritten: 'Caveat', cursive;
+}
+
+/* ============================================
+   Base Styles
+   ============================================ */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-primary);
+  color: var(--color-black);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   Neumorphic Utilities
+   ============================================ */
+.neu-raised {
+  background: var(--color-bg-primary);
+  border-radius: 16px;
+  box-shadow:
+    6px 6px 12px rgba(0, 0, 0, 0.1),
+    -6px -6px 12px rgba(255, 255, 255, 0.7);
+}
+
+.neu-raised-sm {
+  background: var(--color-bg-primary);
+  border-radius: 12px;
+  box-shadow:
+    3px 3px 6px rgba(0, 0, 0, 0.08),
+    -3px -3px 6px rgba(255, 255, 255, 0.6);
+}
+
+.neu-pressed {
+  background: var(--color-bg-primary);
+  border-radius: 16px;
+  box-shadow:
+    inset 4px 4px 8px rgba(0, 0, 0, 0.1),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.7);
+}
+
+.neu-flat {
+  background: var(--color-bg-primary);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+}
+
+.neu-button {
+  background: var(--color-bg-primary);
+  border-radius: 12px;
+  box-shadow:
+    4px 4px 8px rgba(0, 0, 0, 0.1),
+    -4px -4px 8px rgba(255, 255, 255, 0.7);
+  transition: all 0.2s ease-in-out;
+}
+
+.neu-button:hover {
+  box-shadow:
+    6px 6px 12px rgba(0, 0, 0, 0.12),
+    -6px -6px 12px rgba(255, 255, 255, 0.8);
+  transform: translateY(-1px);
+}
+
+.neu-button:active {
+  box-shadow:
+    inset 2px 2px 4px rgba(0, 0, 0, 0.1),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.7);
+  transform: translateY(0);
+}
+
+/* ============================================
+   Typography Utilities
+   ============================================ */
+.font-title {
+  font-family: var(--font-title);
+}
+
+.font-handwritten {
+  font-family: var(--font-handwritten);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
