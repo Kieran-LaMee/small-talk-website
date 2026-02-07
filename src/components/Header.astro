@@ -35,15 +35,12 @@ const { showAnchors = true } = Astro.props;
 <script>
   const header = document.getElementById("site-header");
   if (header) {
-    let lastScroll = 0;
     window.addEventListener("scroll", () => {
-      const scrollY = window.scrollY;
-      if (scrollY > 20) {
+      if (window.scrollY > 20) {
         header.style.boxShadow = "0 2px 8px rgba(0, 0, 0, 0.06)";
       } else {
         header.style.boxShadow = "none";
       }
-      lastScroll = scrollY;
     }, { passive: true });
   }
 </script>

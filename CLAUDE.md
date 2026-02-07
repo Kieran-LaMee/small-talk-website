@@ -12,7 +12,8 @@ npm run build   # Build to dist/
 
 ## Key Documents
 
-- `IMPLEMENTATION_PLAN.md` — Full website spec: sessions, design system, content, deployment
+- `IMPLEMENTATION_PLAN.md` — Remaining tasks, assets needed, deployment steps
+- `privacy_policy_plan.md` — Termly questionnaire reference for privacy policy
 
 ## Project Structure
 
@@ -97,6 +98,6 @@ public/
 - [x] Session 2: Design system & core components
 - [x] Session 3: Landing page structure
 - [x] Session 4: Landing page content sections
-- [ ] Session 5: Privacy policy page
-- [ ] Session 6: Support page & final polish
-- [ ] Session 7: Deployment & launch
+- [x] Session 5: Privacy policy page (content done, legal decisions pending)
+- [x] Session 6: Support page & FAQ (content done, polish items pending)
+- [ ] Session 7: Deployment & launch (see IMPLEMENTATION_PLAN.md)
