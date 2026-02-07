@@ -1,87 +1,72 @@
 ---
 import PhoneMockup from "./PhoneMockup.astro";
 import SectionHeading from "./SectionHeading.astro";
+
+const screenshots = [
+  {
+    src: "/images/screenshot-splash.png",
+    alt: "Small Talk Notebook intro screen",
+  },
+  {
+    src: "/images/screenshot-person-detail.png",
+    alt: "Person details view showing name, birthday, location, and linked people",
+  },
+  {
+    src: "/images/screenshot-notes.png",
+    alt: "Notes view with calendar and conversation entries",
+  },
+  {
+    src: "/images/screenshot-themes.png",
+    alt: "Color theme picker with seven palette options",
+  },
+];
 ---
 
-<section id="preview" class="py-20 md:py-28 px-6 scroll-animate">
-  <div class="max-w-4xl mx-auto">
+<section id="preview" class="py-20 md:py-28 scroll-animate">
+  <div class="max-w-4xl mx-auto px-6">
     <SectionHeading title="Preview" annotation="a quiet look" />
 
-    <div class="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16">
-      <!-- Phone mockup with placeholder app UI -->
-      <PhoneMockup>
-        <div class="h-full flex flex-col p-4 pt-8 text-xs">
-          <!-- App header placeholder -->
-          <div class="text-center mb-4">
-            <span class="font-handwritten text-lg text-[--color-contrast]">Small Talk</span>
-          </div>
-          <!-- Search bar placeholder -->
-          <div class="neu-pressed rounded-xl px-3 py-2 mb-4">
-            <span class="text-[--color-muted] opacity-50 text-[10px]">Search people...</span>
-          </div>
-          <!-- People list placeholders -->
-          <div class="space-y-3 flex-1">
-            <div class="neu-raised-sm rounded-xl px-3 py-2.5">
-              <div class="flex items-center gap-2">
-                <div class="w-7 h-7 rounded-full bg-[--color-contrast]/10 flex items-center justify-center">
-                  <span class="text-[--color-contrast] text-[10px] font-bold">S</span>
-                </div>
-                <div>
-                  <div class="text-[--color-contrast] font-bold text-[11px]">Sarah</div>
-                  <div class="text-[--color-muted] text-[9px]">Loves chamomile tea</div>
-                </div>
-              </div>
-            </div>
-            <div class="neu-raised-sm rounded-xl px-3 py-2.5">
-              <div class="flex items-center gap-2">
-                <div class="w-7 h-7 rounded-full bg-[--color-highlight]/10 flex items-center justify-center">
-                  <span class="text-[--color-highlight] text-[10px] font-bold">M</span>
-                </div>
-                <div>
-                  <div class="text-[--color-contrast] font-bold text-[11px]">Marcus</div>
-                  <div class="text-[--color-muted] text-[9px]">Birthday: March 15</div>
-                </div>
-              </div>
-            </div>
-            <div class="neu-raised-sm rounded-xl px-3 py-2.5">
-              <div class="flex items-center gap-2">
-                <div class="w-7 h-7 rounded-full bg-[--color-bg-secondary]/20 flex items-center justify-center">
-                  <span class="text-[--color-bg-secondary] text-[10px] font-bold">J</span>
-                </div>
-                <div>
-                  <div class="text-[--color-contrast] font-bold text-[11px]">Jamie</div>
-                  <div class="text-[--color-muted] text-[9px]">Allergic to peanuts</div>
-                </div>
-              </div>
-            </div>
-            <div class="neu-raised-sm rounded-xl px-3 py-2.5">
-              <div class="flex items-center gap-2">
-                <div class="w-7 h-7 rounded-full bg-[--color-contrast]/10 flex items-center justify-center">
-                  <span class="text-[--color-contrast] text-[10px] font-bold">R</span>
-                </div>
-                <div>
-                  <div class="text-[--color-contrast] font-bold text-[11px]">Rosa</div>
-                  <div class="text-[--color-muted] text-[9px]">Dog named Biscuit</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </PhoneMockup>
-
-      <!-- Caption -->
-      <div class="max-w-xs text-center md:text-left">
-        <p class="font-handwritten text-2xl text-[--color-contrast] mb-3">
-          The details that matter.
-        </p>
-        <p class="text-[--color-muted] text-sm leading-relaxed">
-          Birthdays. Favorite drinks. The name of their dog.
-          The small things that show you care.
-        </p>
-        <p class="text-[--color-muted] text-xs mt-4 opacity-60">
-          Everything you need is free. Unlock extra themes and export with a one-time purchase.
-        </p>
-      </div>
+    <!-- Caption -->
+    <div class="text-center mb-12">
+      <p class="font-handwritten text-2xl text-[--color-contrast] mb-3">
+        The details that matter.
+      </p>
+      <p class="text-[--color-muted] text-sm leading-relaxed max-w-md mx-auto">
+        Birthdays. Favorite drinks. The name of their dog.
+        The small things that show you care.
+      </p>
     </div>
   </div>
+
+  <!-- Horizontal scroll -->
+  <div class="overflow-x-auto pb-6 scrollbar-hide">
+    <div class="flex gap-8 md:gap-10 px-6 w-max mx-auto">
+      {screenshots.map((shot) => (
+        <PhoneMockup>
+          <img
+            src={shot.src}
+            alt={shot.alt}
+            class="w-full h-full object-cover object-top"
+            loading="lazy"
+          />
+        </PhoneMockup>
+      ))}
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-6">
+    <p class="text-center text-[--color-muted] text-xs mt-8 opacity-60">
+      Everything you need is free. Unlock extra themes and export with a one-time purchase.
+    </p>
+  </div>
 </section>
+
+<style>
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+</style>

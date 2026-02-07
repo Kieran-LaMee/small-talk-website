@@ -12,9 +12,12 @@ const { showAnchors = true } = Astro.props;
 >
   <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
     <!-- Branding -->
-    <a href="/" class="flex items-baseline gap-1 hover:opacity-80 transition-opacity">
-      <span class="font-handwritten text-2xl text-[--color-contrast]">Small Talk</span>
-      <span class="font-title text-xl text-[--color-muted]">notebook</span>
+    <a href="/" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+      <img src="/images/app-icon.png" alt="" class="w-7 h-7 rounded-lg" aria-hidden="true" />
+      <span class="flex items-baseline gap-1">
+        <span class="font-handwritten text-2xl text-[--color-contrast]">Small Talk</span>
+        <span class="font-title text-xl text-[--color-muted]">notebook</span>
+      </span>
     </a>
 
     <!-- Navigation -->

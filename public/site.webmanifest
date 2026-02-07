@@ -1,0 +1,14 @@
+{
+  "name": "Small Talk Notebook",
+  "short_name": "Small Talk",
+  "icons": [
+    {
+      "src": "/images/app-icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#FFF8F0",
+  "background_color": "#FFF8F0",
+  "display": "browser"
+}
