@@ -8,12 +8,20 @@ const screenshots = [
     alt: "Small Talk Notebook intro screen",
   },
   {
+    src: "/images/screenshot-people.png",
+    alt: "People list with search and contact cards",
+  },
+  {
     src: "/images/screenshot-person-detail.png",
-    alt: "Person details view showing name, birthday, location, and linked people",
+    alt: "Person profile with notes and conversation history",
   },
   {
     src: "/images/screenshot-notes.png",
-    alt: "Notes view with calendar and conversation entries",
+    alt: "Notes timeline with calendar and conversation entries",
+  },
+  {
+    src: "/images/screenshot-dark.png",
+    alt: "Notes timeline in dark theme",
   },
   {
     src: "/images/screenshot-themes.png",
@@ -24,18 +32,7 @@ const screenshots = [
 
 <section id="preview" class="py-20 md:py-28 scroll-animate">
   <div class="max-w-4xl mx-auto px-6">
-    <SectionHeading title="Preview" annotation="a quiet look" />
-
-    <!-- Caption -->
-    <div class="text-center mb-12">
-      <p class="font-handwritten text-2xl text-[--color-contrast] mb-3">
-        The details that matter.
-      </p>
-      <p class="text-[--color-muted] text-sm leading-relaxed max-w-md mx-auto">
-        Birthdays. Favorite drinks. The name of their dog.
-        The small things that show you care.
-      </p>
-    </div>
+    <SectionHeading title="Preview" />
   </div>
 
   <!-- Horizontal scroll -->
@@ -54,11 +51,6 @@ const screenshots = [
     </div>
   </div>
 
-  <div class="max-w-4xl mx-auto px-6">
-    <p class="text-center text-[--color-muted] text-xs mt-8 opacity-60">
-      Everything you need is free. Unlock extra themes and export with a one-time purchase.
-    </p>
-  </div>
 </section>
 
 <style>
