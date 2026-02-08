@@ -100,4 +100,4 @@ public/
 - [x] Session 4: Landing page content sections
 - [x] Session 5: Privacy policy page (content done, legal decisions pending)
 - [x] Session 6: Support page & FAQ (content done, polish items pending)
-- [ ] Session 7: Deployment & launch (see IMPLEMENTATION_PLAN.md)
+- [x] Session 7: Deployment & launch
