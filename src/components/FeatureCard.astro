@@ -2,7 +2,7 @@
 import Icon from "./Icon.astro";
 
 interface Props {
-  icon: "shield" | "check" | "moon" | "palette";
+  icon: "shield" | "check" | "moon" | "palette" | "tag";
   title: string;
   description: string;
 }
@@ -17,7 +17,5 @@ const { icon, title, description } = Astro.props;
   <h3 class="font-title text-3xl text-[--color-contrast] leading-tight mb-2">
     {title}
   </h3>
-  <p class="text-[--color-muted] text-sm leading-relaxed">
-    {description}
-  </p>
+  <p class="text-[--color-muted] text-sm leading-relaxed" set:html={description} />
 </div>
