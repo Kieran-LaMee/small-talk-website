@@ -48,16 +48,14 @@ body {
   background: var(--color-bg-primary);
   border-radius: 16px;
   box-shadow:
-    6px 6px 12px rgba(0, 0, 0, 0.1),
-    -6px -6px 12px rgba(255, 255, 255, 0.7);
+    6px 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .neu-raised-sm {
   background: var(--color-bg-primary);
   border-radius: 12px;
   box-shadow:
-    3px 3px 6px rgba(0, 0, 0, 0.08),
-    -3px -3px 6px rgba(255, 255, 255, 0.6);
+    3px 3px 6px rgba(0, 0, 0, 0.08);
 }
 
 .neu-pressed {
@@ -78,23 +76,20 @@ body {
   background: var(--color-bg-primary);
   border-radius: 12px;
   box-shadow:
-    4px 4px 8px rgba(0, 0, 0, 0.1),
-    -4px -4px 8px rgba(255, 255, 255, 0.7);
+    4px 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
 
 .neu-button:hover {
   box-shadow:
-    6px 6px 12px rgba(0, 0, 0, 0.12),
-    -6px -6px 12px rgba(255, 255, 255, 0.8);
+    6px 6px 12px rgba(0, 0, 0, 0.12);
   transform: translateY(-1px);
 }
 
 .neu-button:active {
   box-shadow:
-    inset 2px 2px 4px rgba(0, 0, 0, 0.1),
-    inset -2px -2px 4px rgba(255, 255, 255, 0.7);
+    inset 2px 2px 4px rgba(0, 0, 0, 0.1);
   transform: translateY(0);
 }
 
@@ -102,14 +97,12 @@ body {
 @media (max-width: 640px) {
   .neu-raised {
     box-shadow:
-      4px 4px 8px rgba(0, 0, 0, 0.08),
-      -4px -4px 8px rgba(255, 255, 255, 0.6);
+      4px 4px 8px rgba(0, 0, 0, 0.08);
   }
 
   .neu-raised-sm {
     box-shadow:
-      2px 2px 4px rgba(0, 0, 0, 0.06),
-      -2px -2px 4px rgba(255, 255, 255, 0.5);
+      2px 2px 4px rgba(0, 0, 0, 0.06);
   }
 
   .neu-pressed {
@@ -120,14 +113,12 @@ body {
 
   .neu-button {
     box-shadow:
-      3px 3px 6px rgba(0, 0, 0, 0.08),
-      -3px -3px 6px rgba(255, 255, 255, 0.6);
+      3px 3px 6px rgba(0, 0, 0, 0.08);
   }
 
   .neu-button:hover {
     box-shadow:
-      4px 4px 8px rgba(0, 0, 0, 0.1),
-      -4px -4px 8px rgba(255, 255, 255, 0.7);
+      4px 4px 8px rgba(0, 0, 0, 0.1);
   }
 }
 

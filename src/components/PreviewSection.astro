@@ -30,27 +30,26 @@ const screenshots = [
 ];
 ---
 
-<section id="preview" class="py-20 md:py-28 scroll-animate">
-  <div class="max-w-4xl mx-auto px-6">
+<section id="preview" class="px-6 scroll-animate">
+  <div class="max-w-4xl mx-auto bg-[--color-bg-primary]/80 backdrop-blur-sm rounded-3xl px-8 md:px-10 py-10 border border-white/40 overflow-hidden">
     <SectionHeading title="Preview" />
-  </div>
 
-  <!-- Horizontal scroll -->
-  <div class="overflow-x-auto pb-6 scrollbar-hide">
-    <div class="flex gap-8 md:gap-10 px-6 w-max mx-auto">
-      {screenshots.map((shot) => (
-        <PhoneMockup>
-          <img
-            src={shot.src}
-            alt={shot.alt}
-            class="w-full h-full object-cover object-top"
-            loading="lazy"
-          />
-        </PhoneMockup>
-      ))}
+    <!-- Horizontal scroll -->
+    <div class="overflow-x-auto pb-6 scrollbar-hide">
+      <div class="flex gap-8 md:gap-10 w-max mx-auto">
+        {screenshots.map((shot) => (
+          <PhoneMockup>
+            <img
+              src={shot.src}
+              alt={shot.alt}
+              class="w-full h-full object-cover object-top"
+              loading="lazy"
+            />
+          </PhoneMockup>
+        ))}
+      </div>
     </div>
   </div>
-
 </section>
 
 <style>

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import BackgroundCircles from "../components/BackgroundCircles.astro";
 import Hero from "../components/Hero.astro";
 import FeaturesSection from "../components/FeaturesSection.astro";
 import PreviewSection from "../components/PreviewSection.astro";
@@ -7,15 +8,12 @@ import ThemesSection from "../components/ThemesSection.astro";
 ---
 
 <BaseLayout title="Small Talk Notebook — Remember what matters about the people who matter">
-  <!-- Hero -->
-  <Hero />
+  <BackgroundCircles />
 
-  <!-- Features -->
-  <FeaturesSection />
-
-  <!-- Preview -->
-  <PreviewSection />
-
-  <!-- Themes -->
-  <ThemesSection />
+  <div class="flex flex-col gap-12">
+    <Hero />
+    <FeaturesSection />
+    <PreviewSection />
+    <ThemesSection />
+  </div>
 </BaseLayout>
