@@ -35,19 +35,23 @@ const screenshots = [
     <SectionHeading title="Preview" />
 
     <!-- Horizontal scroll -->
-    <div class="overflow-x-auto -mx-8 md:-mx-10 px-8 md:px-10 pb-6 scrollbar-hide">
-      <div class="flex gap-8 md:gap-10" style="min-width: max-content;">
-        {screenshots.map((shot) => (
-          <PhoneMockup>
-            <img
-              src={shot.src}
-              alt={shot.alt}
-              class="w-full h-full object-cover object-top"
-              loading="lazy"
-            />
-          </PhoneMockup>
-        ))}
+    <div class="relative -mx-8 md:-mx-10">
+      <div class="overflow-x-auto px-8 md:px-10 pb-6 scrollbar-hide">
+        <div class="flex gap-8 md:gap-10" style="min-width: max-content;">
+          {screenshots.map((shot) => (
+            <PhoneMockup>
+              <img
+                src={shot.src}
+                alt={shot.alt}
+                class="w-full h-full object-cover object-top"
+                loading="lazy"
+              />
+            </PhoneMockup>
+          ))}
+        </div>
       </div>
+      <div class="fade-edge fade-left"></div>
+      <div class="fade-edge fade-right"></div>
     </div>
   </div>
 </section>
@@ -59,5 +63,30 @@ const screenshots = [
   }
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
+  }
+  .fade-edge {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2rem;
+    pointer-events: none;
+    z-index: 10;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  .fade-left {
+    left: 0;
+    mask-image: linear-gradient(to right, black, transparent);
+    -webkit-mask-image: linear-gradient(to right, black, transparent);
+  }
+  .fade-right {
+    right: 0;
+    mask-image: linear-gradient(to left, black, transparent);
+    -webkit-mask-image: linear-gradient(to left, black, transparent);
+  }
+  @media (min-width: 768px) {
+    .fade-edge {
+      width: 2.5rem;
+    }
   }
 </style>

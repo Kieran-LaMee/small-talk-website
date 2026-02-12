@@ -74,27 +74,31 @@ const themes = [
   <div class="max-w-4xl mx-auto bg-[--color-bg-primary]/80 backdrop-blur-sm rounded-3xl px-8 md:px-10 py-10 border border-white/40">
     <SectionHeading title="Themes" />
 
-    <div class="overflow-x-auto -mx-8 md:-mx-10 px-8 md:px-10 pb-2 scrollbar-hide">
-      <div class="flex gap-4" style="min-width: max-content;">
-        {themes.map((theme) => (
-          <div class="neu-raised-sm p-4 text-center shrink-0 w-44">
-            <div class="flex justify-center gap-1.5 mb-3">
-              {theme.colors.map((color) => (
-                <div
-                  class="w-5 h-5 rounded-full border border-black/5"
-                  style={`background-color: ${color};`}
-                />
-              ))}
+    <div class="relative -mx-8 md:-mx-10">
+      <div class="overflow-x-auto px-8 md:px-10 pb-2 scrollbar-hide">
+        <div class="flex gap-4" style="min-width: max-content;">
+          {themes.map((theme) => (
+            <div class="neu-raised-sm p-4 text-center shrink-0 w-44">
+              <div class="flex justify-center gap-1.5 mb-3">
+                {theme.colors.map((color) => (
+                  <div
+                    class="w-5 h-5 rounded-full border border-black/5"
+                    style={`background-color: ${color};`}
+                  />
+                ))}
+              </div>
+              <p class="font-body text-sm text-[--color-contrast]">
+                {theme.name}
+              </p>
+              {theme.free && (
+                <p class="text-[9px] text-[--color-muted] mt-1 uppercase tracking-wider">Included free</p>
+              )}
             </div>
-            <p class="font-body text-sm text-[--color-contrast]">
-              {theme.name}
-            </p>
-            {theme.free && (
-              <p class="text-[9px] text-[--color-muted] mt-1 uppercase tracking-wider">Included free</p>
-            )}
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
+      <div class="fade-edge fade-left"></div>
+      <div class="fade-edge fade-right"></div>
     </div>
 
     <p class="text-center text-xs text-[--color-muted] mt-8 opacity-70">
@@ -110,5 +114,30 @@ const themes = [
   }
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
+  }
+  .fade-edge {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2rem;
+    pointer-events: none;
+    z-index: 10;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  .fade-left {
+    left: 0;
+    mask-image: linear-gradient(to right, black, transparent);
+    -webkit-mask-image: linear-gradient(to right, black, transparent);
+  }
+  .fade-right {
+    right: 0;
+    mask-image: linear-gradient(to left, black, transparent);
+    -webkit-mask-image: linear-gradient(to left, black, transparent);
+  }
+  @media (min-width: 768px) {
+    .fade-edge {
+      width: 2.5rem;
+    }
   }
 </style>
