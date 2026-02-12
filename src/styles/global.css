@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 /* ============================================
-   CSS Custom Properties - Morning Window Theme
+   CSS Custom Properties - Morning Light Theme
    ============================================ */
 @theme {
-  /* Colors - Morning Window palette */
+  /* Colors - Morning Light palette */
   --color-bg-primary: #FFF8F0;
   --color-bg-secondary: #A1A69F;
   --color-contrast: #2E4A3A;

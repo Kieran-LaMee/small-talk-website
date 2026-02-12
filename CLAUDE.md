@@ -48,7 +48,7 @@ public/
 
 ## Design System
 
-### Color Palette (Morning Window)
+### Color Palette (Morning Light)
 
 ```css
 --color-bg-primary: #FFF8F0;    /* Pale cream */
