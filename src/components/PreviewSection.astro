@@ -31,12 +31,12 @@ const screenshots = [
 ---
 
 <section id="preview" class="px-6 scroll-animate">
-  <div class="max-w-4xl mx-auto bg-[--color-bg-primary]/80 backdrop-blur-sm rounded-3xl px-8 md:px-10 py-10 border border-white/40 overflow-hidden">
+  <div class="max-w-4xl mx-auto bg-[--color-bg-primary]/80 backdrop-blur-sm rounded-3xl px-8 md:px-10 py-10 border border-white/40">
     <SectionHeading title="Preview" />
 
     <!-- Horizontal scroll -->
-    <div class="overflow-x-auto pb-6 scrollbar-hide">
-      <div class="flex gap-8 md:gap-10 w-max mx-auto">
+    <div class="overflow-x-auto -mx-8 md:-mx-10 px-8 md:px-10 pb-6 scrollbar-hide">
+      <div class="flex gap-8 md:gap-10" style="min-width: max-content;">
         {screenshots.map((shot) => (
           <PhoneMockup>
             <img
