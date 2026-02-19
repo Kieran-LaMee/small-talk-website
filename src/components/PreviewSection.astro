@@ -1,31 +1,26 @@
 ---
-import PhoneMockup from "./PhoneMockup.astro";
 import SectionHeading from "./SectionHeading.astro";
 
 const screenshots = [
   {
-    src: "/images/screenshot-splash.png",
-    alt: "Small Talk Notebook intro screen",
+    src: "/images/preview-01-hero.png",
+    alt: "Remember the little things — people list with search and contact cards",
   },
   {
-    src: "/images/screenshot-people.png",
-    alt: "People list with search and contact cards",
+    src: "/images/preview-02-hero.png",
+    alt: "About the people who matter — quick actions to add notes and people",
   },
   {
-    src: "/images/screenshot-person-detail.png",
-    alt: "Person profile with notes and conversation history",
+    src: "/images/preview-03-hero.png",
+    alt: "Never forget birthdays — calendar view with notes timeline",
   },
   {
-    src: "/images/screenshot-notes.png",
-    alt: "Notes timeline with calendar and conversation entries",
+    src: "/images/preview-04-custom-fields.png",
+    alt: "Use custom fields to note anything — person profile with details",
   },
   {
-    src: "/images/screenshot-dark.png",
-    alt: "Notes timeline in dark theme",
-  },
-  {
-    src: "/images/screenshot-themes.png",
-    alt: "Color theme picker with seven palette options",
+    src: "/images/preview-05-new-note.png",
+    alt: "Quickly jot down small talk and easily find it later — new note screen",
   },
 ];
 ---
@@ -37,16 +32,14 @@ const screenshots = [
     <!-- Horizontal scroll -->
     <div class="relative -mx-8 md:-mx-10">
       <div class="overflow-x-auto px-8 md:px-10 pb-6 scrollbar-hide">
-        <div class="flex gap-8 md:gap-10" style="min-width: max-content;">
+        <div class="flex gap-3 md:gap-4" style="min-width: max-content;">
           {screenshots.map((shot) => (
-            <PhoneMockup>
-              <img
-                src={shot.src}
-                alt={shot.alt}
-                class="w-full h-full object-cover object-top"
-                loading="lazy"
-              />
-            </PhoneMockup>
+            <img
+              src={shot.src}
+              alt={shot.alt}
+              class="h-[500px] md:h-[600px] w-auto rounded-2xl object-contain"
+              loading="lazy"
+            />
           ))}
         </div>
       </div>

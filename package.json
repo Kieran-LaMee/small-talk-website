@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@fontsource/caveat": "^5.2.8",
+    "@fontsource/cormorant-garamond": "^5.2.11",
+    "@fontsource/josefin-sans": "^5.2.8",
     "@fontsource/lato": "^5.2.7",
     "@fontsource/peddana": "^5.2.8",
     "@tailwindcss/vite": "^4.1.18",
