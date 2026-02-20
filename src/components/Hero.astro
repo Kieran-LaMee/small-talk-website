@@ -2,10 +2,10 @@
 import AppStoreBadge from "./AppStoreBadge.astro";
 ---
 
-<section class="relative pt-16 md:pt-20 px-6">
+<section class="relative pt-4 md:pt-6 px-6">
   <div class="relative text-center w-full max-w-4xl mx-auto flex flex-col gap-12">
-    <!-- Card 1: Branding -->
-    <div class="bg-[--color-bg-primary]/80 backdrop-blur-sm rounded-3xl px-10 py-24 md:py-28 border border-white/40">
+    <!-- Card: Branding + Tagline + badges -->
+    <div class="bg-[--color-bg-primary]/80 backdrop-blur-sm rounded-3xl px-10 py-16 md:py-20 border border-white/40 flex flex-col items-center gap-10">
       <div class="neu-raised inline-block px-10 py-8">
         <div class="flex items-center justify-center gap-5 md:gap-6">
           <img src="/images/app-icon.png" alt="" class="w-20 h-20 md:w-28 md:h-28 rounded-[22%] shrink-0" aria-hidden="true" />
@@ -19,15 +19,10 @@ import AppStoreBadge from "./AppStoreBadge.astro";
           </h1>
         </div>
       </div>
-    </div>
 
-    <!-- Card 2: Tagline + badges -->
-    <div class="bg-[--color-bg-primary]/80 backdrop-blur-sm rounded-3xl px-10 py-10 border border-white/40">
-      <div class="neu-raised inline-block px-8 py-6 mb-10">
-        <p class="text-4xl md:text-5xl font-normal text-[--color-contrast] leading-tight" style="font-family: 'Cormorant Garamond', serif;">
-          Remember the little things about the people who matter.
-        </p>
-      </div>
+      <p class="text-4xl md:text-5xl font-normal text-[--color-contrast] leading-tight" style="font-family: 'Cormorant Garamond', serif;">
+        Remember the little things about the people who matter.
+      </p>
 
       <div class="flex flex-col sm:flex-row justify-center gap-4">
         <AppStoreBadge store="apple" href="#" />
