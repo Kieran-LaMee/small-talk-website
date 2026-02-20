@@ -1,47 +1,111 @@
-**Privacy Policy**
+# Privacy Policy
 
-This privacy policy applies to the Small Talk Notebook app (hereby referred to as "Application") for mobile devices that was created by Kieran LaMee (hereby referred to as "Service Provider") as a Freemium service. This service is intended for use "AS IS".
+**Effective as of February 19, 2026**
 
-**What information does the Application obtain and how is it used?**
+This privacy policy applies to the Small Talk Notebook app (hereby referred to as "Application") for mobile devices, created by Kieran LaMee (hereby referred to as "Service Provider") as a Freemium service.
 
-The Application does not obtain any information when you download and use it. Registration is not required to use the Application.
+Small Talk is a **local-first app**. Everything you store in the Application — names, notes, relationships, birthdays — lives exclusively on your device. The Service Provider does not operate servers that receive, store, or process your personal data. This policy explains how your data is handled within the Application.
 
-**Does the Application collect precise real time location information of the device?**
+---
 
-This Application does not collect precise information about the location of your mobile device.
+## What data does the Application store, and where does it go?
 
-**Do third parties see and/or have access to information obtained by the Application?**
+The Application stores the following information on your device:
 
-Since the Application does not collect any information, no data is shared with third parties.
+- Names, relationship types, and custom fields you create about people
+- Birthdays, cities, and workplace or school information
+- Free-text notes about people, including note headlines and body content
+- Relationships between people (e.g. "sister", "coworker")
+- Tags and categories you create
 
-**What are my opt-out rights?**
+All of this data is stored in an encrypted database on your device only. It is never transmitted to the Service Provider or any external server. The Service Provider has no ability to access, view, or recover your data.
 
-You can stop all collection of information by the Application easily by uninstalling it. You may use the standard uninstall processes as may be available as part of your mobile device or via the mobile application marketplace or network.
+---
 
-**Children**
+## Does the Service Provider collect any information?
 
-The Application is not used to knowingly solicit data from or market to children under the age of 13.
+No. The Service Provider does not collect usage data, analytics, crash reports, or any other telemetry. The Application makes no outbound network requests to any developer-controlled server.
 
-The Service Provider does not knowingly collect personally identifiable information from children. The Service Provider encourages all children to never submit any personally identifiable information through the Application and/or Services. The Service Provider encourage parents and legal guardians to monitor their children's Internet usage and to help enforce this Policy by instructing their children never to provide personally identifiable information through the Application and/or Services without their permission. If you have reason to believe that a child has provided personally identifiable information to the Service Provider through the Application and/or Services, please contact the Service Provider (support@smalltalknotebook.com) so that they will be able to take the necessary actions. You must also be at least 16 years of age to consent to the processing of your personally identifiable information in your country (in some countries we may allow your parent or guardian to do so on your behalf).
+Registration is not required to use the Application.
 
-**Security**
+---
 
-The Service Provider is concerned about safeguarding the confidentiality of your information. However, since the Application does not collect any information, there is no risk of your data being accessed by unauthorized individuals.
+## Do third parties see or have access to my data?
 
-**Changes**
+Your personal data is not shared with third parties. The only external communication the Application performs is:
 
-This Privacy Policy may be updated from time to time for any reason. The Service Provider will notify you of any changes to their Privacy Policy by updating this page with the new Privacy Policy. You are advised to consult this Privacy Policy regularly for any changes, as continued use is deemed approval of all changes.
+- **Apple App Store:** If you purchase Small Talk Plus, the transaction is processed by Apple via StoreKit. The Service Provider does not receive your payment details or Apple ID. Apple's privacy policy governs this interaction.
 
-This privacy policy is effective as of 2026-02-10
+---
 
-**Your Consent**
+## Data security
 
-By using the Application, you are consenting to the processing of your information as set forth in this Privacy Policy now and as amended by the Service Provider.
+Your data is protected by AES-256 encryption (SQLCipher). The encryption key is generated on your device at first launch and stored in the iOS Keychain. The Keychain entry is included in encrypted iCloud Keychain backups, which allows your data to transfer securely to a new device.
 
-**Contact Us**
+The Service Provider never has access to your encryption key or your data.
 
-If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at support@smalltalknotebook.com.
+---
 
-* * *
+## iCloud device backup
 
-This privacy policy page was generated by [App Privacy Policy Generator](https://app-privacy-policy-generator.nisrulz.com/)
+The Application's encrypted database is included in standard iOS device backups (iCloud and iTunes/Finder). The database is backed up in its encrypted form — without the corresponding encryption key it cannot be read. The encryption key is stored separately in the iOS Keychain, which is synced via encrypted iCloud Keychain. Together, this means a full device backup and restore will correctly recover your data on a new device, while the backed-up files remain unreadable to anyone without access to both.
+
+---
+
+## Backup and export
+
+The Application includes an optional backup feature (available with Small Talk Plus). When you export a backup, a file containing all your personal data is created on your device and surfaced via the iOS share sheet. You choose where it goes — Files, AirDrop, email, or any other destination your device supports. The Service Provider does not receive your backup and has no access to it.
+
+Backup files are not additionally encrypted beyond whatever protections apply to the destination you choose. You are responsible for storing backups securely.
+
+---
+
+## Data deletion
+
+All personal data stored by the Application lives on your device. Uninstalling the Application removes the encrypted database, deleting all your personal data. If you want to preserve your data before uninstalling, you can export a backup first using the backup feature (available with Small Talk Plus).
+
+---
+
+## Notifications
+
+The Application can send local notifications for birthday reminders and note reminders, if you choose to enable these features. All notifications are generated entirely on your device — no push notification service or external server is involved.
+
+Birthday reminder notifications include the person's name. Note reminder notifications may include your note headline or content. This information never leaves your device.
+
+---
+
+## Biometric authentication
+
+The Application offers an optional App Lock feature using Face ID or Touch ID. Biometric authentication is handled entirely by iOS — the Application receives only a pass or fail result and never has access to any biometric data.
+
+---
+
+## Location data
+
+The Application does not collect or access location information from your device.
+
+---
+
+## Children
+
+The Application is not directed to children under the age of 13, and the Service Provider does not knowingly collect information from children. You must be at least 16 years of age to consent to the processing of your information in your country (in some countries a parent or guardian may consent on your behalf).
+
+If you believe a child has used the Application in a way that raises privacy concerns, please contact the Service Provider at support@smalltalknotebook.com.
+
+---
+
+## Changes
+
+This Privacy Policy may be updated from time to time. Any changes will be posted to this page with an updated effective date. Continued use of the Application after changes are posted constitutes acceptance of the revised policy.
+
+---
+
+## Your consent
+
+By using the Application, you consent to this Privacy Policy as currently in effect.
+
+---
+
+## Contact us
+
+If you have any questions about this Privacy Policy or the Application's data practices, please contact the Service Provider at support@smalltalknotebook.com.
