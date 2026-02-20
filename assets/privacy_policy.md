@@ -34,13 +34,13 @@ Registration is not required to use the Application.
 
 Your personal data is not shared with third parties. The only external communication the Application performs is:
 
-- **Apple App Store:** If you purchase Small Talk Plus, the transaction is processed by Apple via StoreKit. The Service Provider does not receive your payment details or Apple ID. Apple's privacy policy governs this interaction.
+- **App stores:** If you purchase Small Talk Plus, the transaction is processed by Apple (via StoreKit on iOS) or Google (via Google Play Billing on Android). The Service Provider does not receive your payment details or account information. The privacy policies of [Apple](https://www.apple.com/legal/privacy/) and [Google](https://policies.google.com/privacy) govern these interactions.
 
 ---
 
 ## Data security
 
-Your data is protected by AES-256 encryption (SQLCipher). The encryption key is generated on your device at first launch and stored in the iOS Keychain. The Keychain entry is included in encrypted iCloud Keychain backups, which allows your data to transfer securely to a new device.
+Your data is protected by AES-256 encryption (SQLCipher). The encryption key is generated on your device at first launch and stored securely using platform-provided mechanisms (the Keychain on iOS, the Android Keystore on Android). On iOS, the Keychain entry is included in encrypted iCloud Keychain backups, which allows your data to transfer securely to a new device.
 
 The Service Provider never has access to your encryption key or your data.
 
@@ -48,13 +48,13 @@ The Service Provider never has access to your encryption key or your data.
 
 ## iCloud device backup
 
-The Application's encrypted database is included in standard iOS device backups (iCloud and iTunes/Finder). The database is backed up in its encrypted form — without the corresponding encryption key it cannot be read. The encryption key is stored separately in the iOS Keychain, which is synced via encrypted iCloud Keychain. Together, this means a full device backup and restore will correctly recover your data on a new device, while the backed-up files remain unreadable to anyone without access to both.
+The Application's encrypted database may be included in standard device backups (such as iCloud or iTunes/Finder on iOS, or Google backups on Android). The database is backed up in its encrypted form — without the corresponding encryption key it cannot be read. The encryption key is stored separately in platform-secured storage. Together, this means a device backup and restore can recover your data, while the backed-up files remain unreadable to anyone without access to both.
 
 ---
 
 ## Backup and export
 
-The Application includes an optional backup feature (available with Small Talk Plus). When you export a backup, a file containing all your personal data is created on your device and surfaced via the iOS share sheet. You choose where it goes — Files, AirDrop, email, or any other destination your device supports. The Service Provider does not receive your backup and has no access to it.
+The Application includes an optional backup feature (available with Small Talk Plus). When you export a backup, a file containing all your personal data is created on your device and surfaced via the system share sheet. You choose where it goes — Files, AirDrop, email, or any other destination your device supports. The Service Provider does not receive your backup and has no access to it.
 
 Backup files are not additionally encrypted beyond whatever protections apply to the destination you choose. You are responsible for storing backups securely.
 
@@ -76,7 +76,7 @@ Birthday reminder notifications include the person's name. Note reminder notific
 
 ## Biometric authentication
 
-The Application offers an optional App Lock feature using Face ID or Touch ID. Biometric authentication is handled entirely by iOS — the Application receives only a pass or fail result and never has access to any biometric data.
+The Application offers an optional App Lock feature using biometric authentication (such as Face ID, Touch ID, or fingerprint). Authentication is handled entirely by the operating system — the Application receives only a pass or fail result and never has access to any biometric data.
 
 ---
 
