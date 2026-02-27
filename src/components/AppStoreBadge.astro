@@ -2,9 +2,10 @@
 interface Props {
   store: "apple" | "google";
   href?: string;
+  comingSoon?: boolean;
 }
 
-const { store, href = "#" } = Astro.props;
+const { store, href = "#", comingSoon = false } = Astro.props;
 
 const labels = {
   apple: { prefix: "Download on the", name: "App Store" },
@@ -12,14 +13,17 @@ const labels = {
 };
 
 const label = labels[store];
+const prefix = comingSoon ? "Coming soon on" : label.prefix;
+const Tag = comingSoon ? "div" : "a";
 ---
 
-<a
-  href={href}
-  class="neu-button inline-flex items-center gap-3 px-5 py-3 rounded-xl text-[--color-contrast] hover:no-underline"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label={`${label.prefix} ${label.name}`}
+<Tag
+  {...(!comingSoon && { href, target: "_blank", rel: "noopener noreferrer" })}
+  class:list={[
+    "inline-flex items-center gap-3 px-5 py-3 rounded-xl text-[--color-contrast]",
+    comingSoon ? "neu-flat opacity-80 cursor-default" : "neu-button hover:no-underline",
+  ]}
+  aria-label={`${prefix} ${label.name}`}
 >
   {store === "apple" ? (
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 814 1000" aria-hidden="true">
@@ -31,7 +35,7 @@ const label = labels[store];
     </svg>
   )}
   <div class="flex flex-col leading-tight">
-    <span class="text-xs opacity-70">{label.prefix}</span>
+    <span class="text-xs opacity-70">{prefix}</span>
     <span class="text-base font-bold">{label.name}</span>
   </div>
-</a>
+</Tag>

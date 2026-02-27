@@ -7,7 +7,7 @@ const { showAnchors = true } = Astro.props;
 ---
 
 <header
-  class="sticky top-0 z-50 bg-[--color-bg-primary]/90 backdrop-blur-sm transition-shadow duration-300"
+  class="sticky top-0 z-50 bg-[#FFFCF8]/40 backdrop-blur-md backdrop-saturate-150 transition-shadow duration-300"
   id="site-header"
 >
   <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -46,7 +46,7 @@ const { showAnchors = true } = Astro.props;
   <!-- Mobile dropdown menu -->
   <nav
     id="mobile-menu"
-    class="sm:hidden hidden flex-col gap-1 px-6 pb-4 text-sm text-[--color-muted] bg-[--color-bg-primary]/95 backdrop-blur-sm shadow-[0_4px_12px_rgba(0,0,0,0.06)]"
+    class="sm:hidden hidden flex-col gap-1 px-6 pb-4 text-sm text-[--color-muted] bg-[#FFFCF8]/60 backdrop-blur-md backdrop-saturate-150 shadow-[0_4px_12px_rgba(0,0,0,0.06)]"
   >
     {showAnchors && (
       <>
