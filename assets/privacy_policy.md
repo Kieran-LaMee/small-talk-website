@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Effective as of February 19, 2026**
+**Effective as of March 7, 2026**
 
 This privacy policy applies to the Small Talk Notebook app (hereby referred to as "Application") for mobile devices, created by Kieran LaMee (hereby referred to as "Service Provider") as a Freemium service.
 
@@ -17,6 +17,7 @@ The Application stores the following information on your device:
 - Free-text notes about people, including note headlines and body content
 - Relationships between people (e.g. "sister", "coworker")
 - Tags and categories you create
+- References to photos you attach to people and notes (the photos themselves remain in your device's photo library)
 
 All of this data is stored in an encrypted database on your device only. It is never transmitted to the Service Provider or any external server. The Service Provider has no ability to access, view, or recover your data.
 
@@ -52,9 +53,21 @@ The Application's encrypted database may be included in standard device backups 
 
 ---
 
+## Photos
+
+The Application allows you to attach photos from your device's photo library to people and notes. When you attach a photo, the Application stores only a reference identifier pointing to that photo — it does not copy or duplicate the photo itself. The photos remain in your device's photo library at all times.
+
+To access your photo library, the Application requests permission through your device's operating system. On iOS, you can grant full access or select specific photos. On Android, you grant access to photos and images. You can revoke this permission at any time in your device's Settings, and the Application will no longer display photo thumbnails.
+
+Photo reference identifiers are stored in the Application's encrypted database alongside your other data. They are never transmitted to the Service Provider or any external server. If you delete a photo from your device's photo library, the Application detects this and removes the corresponding reference automatically.
+
+---
+
 ## Backup and export
 
 The Application includes an optional backup feature (available with Small Talk Plus). When you export a backup, a file containing all your personal data is created on your device and surfaced via the system share sheet. You choose where it goes — Files, AirDrop, email, or any other destination your device supports. The Service Provider does not receive your backup and has no access to it.
+
+Backup files include photo reference identifiers but not the photos themselves. Photos cannot be transferred between devices via backup — only the references are preserved, and they will resolve only if the same photos exist in the new device's photo library.
 
 Backup files are not additionally encrypted beyond whatever protections apply to the destination you choose. You are responsible for storing backups securely.
 

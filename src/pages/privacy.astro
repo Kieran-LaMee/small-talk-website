@@ -10,7 +10,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </a>
 
       <h1 class="font-title text-5xl text-[--color-contrast] mb-4">Privacy Policy</h1>
-      <p class="text-sm text-[--color-muted] mb-12">Effective as of February 19, 2026</p>
+      <p class="text-sm text-[--color-muted] mb-12">Effective as of March 7, 2026</p>
 
       <div class="space-y-8 text-[--color-black]">
         <section>
@@ -27,6 +27,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             <li>Free-text notes about people, including note headlines and body content</li>
             <li>Relationships between people (e.g. "sister", "coworker")</li>
             <li>Tags and categories you create</li>
+            <li>References to photos you attach to people and notes (the photos themselves remain in your device's photo library)</li>
           </ul>
           <p class="mt-4">All of this data is stored in an encrypted database on your device only. It is never transmitted to the Service Provider or any external server. The Service Provider has no ability to access, view, or recover your data.</p>
         </section>
@@ -57,8 +58,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </section>
 
         <section>
+          <h2 class="font-title text-2xl text-[--color-contrast] mb-4">Photos</h2>
+          <p>The Application allows you to attach photos from your device's photo library to people and notes. When you attach a photo, the Application stores only a reference identifier pointing to that photo — it does not copy or duplicate the photo itself. The photos remain in your device's photo library at all times.</p>
+          <p class="mt-4">To access your photo library, the Application requests permission through your device's operating system. On iOS, you can grant full access or select specific photos. On Android, you grant access to photos and images. You can revoke this permission at any time in your device's Settings, and the Application will no longer display photo thumbnails.</p>
+          <p class="mt-4">Photo reference identifiers are stored in the Application's encrypted database alongside your other data. They are never transmitted to the Service Provider or any external server. If you delete a photo from your device's photo library, the Application detects this and removes the corresponding reference automatically.</p>
+        </section>
+
+        <section>
           <h2 class="font-title text-2xl text-[--color-contrast] mb-4">Backup and export</h2>
           <p>The Application includes an optional backup feature (available with Small Talk Plus). When you export a backup, a file containing all your personal data is created on your device and surfaced via the system share sheet. You choose where it goes — Files, AirDrop, email, or any other destination your device supports. The Service Provider does not receive your backup and has no access to it.</p>
+          <p class="mt-4">Backup files include photo reference identifiers but not the photos themselves. Photos cannot be transferred between devices via backup — only the references are preserved, and they will resolve only if the same photos exist in the new device's photo library.</p>
           <p class="mt-4">Backup files are not additionally encrypted beyond whatever protections apply to the destination you choose. You are responsible for storing backups securely.</p>
         </section>
 
